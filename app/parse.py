@@ -56,7 +56,7 @@ def write_quotes_to_csv(filename: str, quotes: list) -> None:
 
         for quote in quotes:
             quote_to_dict = asdict(quote)
-            quote_to_dict["tags"] = ", ".join(quote_to_dict["tags"])
+            quote_to_dict["tags"] = str(quote_to_dict["tags"])
             writer.writerow(quote_to_dict)
 
 
